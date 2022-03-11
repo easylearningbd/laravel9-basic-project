@@ -59,7 +59,7 @@
         </button>
         <div class="dropdown-menu dropdown-menu-end">
             <!-- item-->
-            <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+            <a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="ri-user-line align-middle me-1"></i> Profile</a>
             <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>
             <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
             <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
