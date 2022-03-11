@@ -1,0 +1,124 @@
+/*=============================
+06. Work Process
+=============================*/
+.work__process {
+    padding: 100px 0 0;
+    position: relative;
+    @media #{$md} {
+        padding: 120px 0 65px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: $grey;
+        z-index: -1;
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+    & .section__title {
+        margin-bottom: 70px;
+    }
+    &__wrap {
+        justify-content: space-between;
+        & .col {
+            flex: 0 0 auto;
+            width: 20%;
+            @media #{$lg} {
+                width: 25%;
+            }
+            @media #{$md} {
+                width: 50%;
+            }
+            @media #{$xs} {
+                width: 100%;
+            }
+            @media #{$sm} {
+                width: 50%;
+            }
+            &:last-child {
+                & .work__process__item::after {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                & .work__process__item::after {
+                    @media #{$md} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        margin-bottom: 50px;
+        @media #{$md} {
+            width: 80%;
+        }
+        @media #{$xs} {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+        @media #{$sm} {
+            width: 100%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 7px;
+            width: 80%;
+            border-top: 1px dashed #ADADAD;
+            opacity: .7;
+            @media #{$lg} {
+                left: 45%;
+                width: 55%;
+            }
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        &:hover .work__process__icon img{
+            @include transform(rotateY(360deg));
+        }
+    }
+    &_step {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1;
+        color: $secondary-color;
+        margin-bottom: 30px;
+    }
+    &__icon {
+        margin-bottom: 15px;
+        & img {
+            max-height: 56px;
+            @include transition(.5s);
+            @include transform(rotateY(0deg));
+            &.dark {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        & .title {
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            margin-bottom: 15px;
+        }
+        & p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+    }
+}

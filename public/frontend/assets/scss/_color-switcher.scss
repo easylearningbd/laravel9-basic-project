@@ -1,0 +1,82 @@
+/*=============================
+ Color Switcher
+=============================*/
+.switcher__tab {
+    position: absolute;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 52%;
+    @include transform(translateY(-50%) translateX(71px) rotate(90deg));
+    z-index: 3;
+    @media #{$md} {
+        right: 15px;
+        top: 40%;
+    }
+    @media #{$xs} {
+        right: -25px;
+        top: 30%;
+    }
+    &__btn {
+        cursor: pointer;
+    }
+    & .light__mode__title,
+    & .dark__mode__title {
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 15px;
+        font-weight: 700;
+        color: #68666C;
+        display: flex;
+        align-items: center;
+    }
+    & .light__mode__title::after {
+        content: "\f185";
+        font-family: "Font Awesome 5 Pro";
+        margin-left: 13px;
+        color: $secondary-color;
+    }
+    & .dark__mode__title::before {
+        content: "\f755";
+        font-family: "Font Awesome 5 Pro";
+        margin-right: 13px;
+        color: $heading-text-color;
+    }
+    & .mode__switcher {
+        height: 34px;
+        width: 71px;
+        display: inline-block;
+        position: relative;
+        margin: 0 12px;
+        background: $black;
+        @include transform(translateY(0px));
+        @include radius(35px);
+        cursor: pointer;
+        @include transition(0.3s);
+        &::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            background: $white;
+            width: 28px;
+            height: 28px;
+            @include radius(50%);
+            @include transition(0.3s);
+        }
+        &.active::before {
+            left: calc(100% - 31px);
+        }
+    }
+}
+
+
+.active-dark-mode {
+    & .light__mode__title::after {
+        color: $white;
+    }
+    & .dark__mode__title::before {
+        color: $secondary-color;
+    }
+}

@@ -1,0 +1,393 @@
+/*=============================
+01. Theme default CSS
+=============================*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+body {
+	font-family: $font-family-body;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.75;
+	color: $body-text-color;
+	font-style: normal;
+}
+img,
+.img {
+	max-width: 100%;
+	@include transition(.3s);
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+a,
+button {
+	@include transition(.3s);
+}
+a:focus,
+.btn:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+}
+
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: $primary-color;
+	text-decoration: none;
+}
+a,
+button {
+	color: $primary-color;
+	outline: medium none;
+	text-decoration: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+	outline: 0;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-heading;
+	color: $heading-text-color;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: unset;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul,
+ol {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.75;
+	color: $paragraph-text-color;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: $body-text-color;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: $primary-color;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $primary-color;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $primary-color;
+	color: $white;
+	text-shadow: none;
+}
+
+/*=============================
+    - Input Placeholder
+=============================*/
+*::-moz-placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+
+
+/*=============================
+    - Common Classes
+=============================*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+
+/*=============================
+    - Background color
+=============================*/
+.grey-bg {
+	background: $grey;
+}
+.white-bg {
+	background: $white;
+}
+.black-bg {
+	background: $black;
+}
+.theme-bg {
+	background: $primary-color;
+}
+
+
+/*=============================
+    - color
+=============================*/
+.white-color {
+	color: $white;
+}
+.black-color {
+	color: $black;
+}
+.theme-color {
+	color: $primary-color;
+}
+
+
+/*=============================
+    - Bootstrap Custom
+=============================*/
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    --bs-gutter-x: 30px;
+}
+.gutter-y-30 {
+  	--bs-gutter-y: 30px;
+}
+.gx-0 {
+	--bs-gutter-x: 0;
+}
+.custom-container {
+    max-width: 1590px;
+	@media #{$xxl} {
+        max-width: 1530px;
+    }
+	@media #{$xl} {
+        max-width: 1320px;
+    }
+	@media #{$lg} {
+        max-width: 960px;
+    }
+	@media #{$md} {
+        max-width: 720px;
+    }
+	@media #{$xs} {
+        max-width: 100%;
+    }
+	@media #{$sm} {
+        max-width: 540px;
+    }
+}
+
+/*=============================
+    - Button Style
+=============================*/
+.btn {
+    user-select: none;
+    -moz-user-select: none;
+    background: $primary-color none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+	justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding: 20px 47px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    @include transition(.3s);
+    vertical-align: middle;
+    white-space: break-spaces;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0%;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: $secondary-color;
+		display: block;
+		-webkit-transform-origin: right top;
+		-ms-transform-origin: right top;
+		transform-origin: right top;
+		@include transform(scale(0, 1));
+		-webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+		transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+		z-index: -1;
+	}
+	&:hover::before {
+		-webkit-transform-origin: left top;
+		-ms-transform-origin: left top;
+		transform-origin: left top;
+		@include transform(scale(1, 1));
+	}
+	&:hover {
+		color: #fff;
+	}
+}
+.border-btn {
+    border: 1px solid #F4F4F4;
+    background: transparent;
+    color: $body-text-color;
+    padding: 19px 46px;
+	&:hover {
+		border-color: $secondary-color;
+	}
+}
+
+/*=============================
+    - scrollUp
+=============================*/
+.scroll-top {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 105%;
+	right: 30px;
+	font-size: 16px;
+	@include radius(0);
+	z-index: 99;
+	color: $white;
+	text-align: center;
+	cursor: pointer;
+	background: $primary-color;
+	transition: 1s ease;
+	border: none;
+	opacity: 0;
+	@media #{$xs} {
+		right: 15px;
+	}
+}
+.scroll-top.open {
+	bottom: 30px;
+	opacity: 1;
+}
+.scroll-top::after {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	opacity: 1;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+.scroll-top:hover {
+	background: $secondary-color;
+}
+
+
+/*=============================
+    - Margin & Padding
+=============================*/
+/*==== Margin Top ====*/
+@for $i from 1 through 40 {
+    .mt-#{5 * $i}{margin-top: 5px * $i;}
+}
+
+/*==== Margin Bottom ====*/
+@for $i from 1 through 40 {
+    .mb-#{5 * $i}{margin-bottom: 5px *$i;}
+}
+/*==== Margin Left ====*/
+@for $i from 1 through 40 {
+    .ml-#{5 * $i}{margin-left: 5px * $i;}
+}
+
+/*==== Margin Right ====*/
+@for $i from 1 through 40 {
+    .mr-#{5 * $i}{margin-right: 5px *$i;}
+}
+
+/*==== Padding Top ====*/
+@for $i from 1 through 40 {
+    .pt-#{5 * $i}{padding-top: 5px *$i;}
+}
+
+/*==== Padding Bottom ====*/
+@for $i from 1 through 40 {
+    .pb-#{5 * $i}{padding-bottom: 5px *$i;}
+}
+
+/*==== Padding Left ====*/
+@for $i from 1 through 40 {
+    .pl-#{5 * $i}{padding-left: 5px *$i;}
+}
+
+/*==== Padding Right ====*/
+@for $i from 1 through 40 {
+    .pr-#{5 * $i}{padding-right: 5px *$i;}
+}
+
+
+// others common css here :)
+
+

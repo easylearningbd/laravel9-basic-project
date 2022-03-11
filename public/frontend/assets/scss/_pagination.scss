@@ -1,0 +1,45 @@
+/*=============================
+11. Pagination
+=============================*/
+.pagination-wrap {
+    margin-top: 50px;
+    & .pagination {
+        justify-content: center;
+        flex-wrap: wrap;
+        & li {
+            margin: 10px 4px 0;
+            & a.page-link {
+                margin-left: 0;
+                width: 49px;
+                height: 49px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $black;
+                border-radius: 0;
+                font-size: 14px;
+                font-weight: 700;
+                color: $heading-text-color;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 4px;
+                    background: $black;
+                    @include transition(.4s);
+                }
+            }
+            &.active,
+            &:hover {
+                & a.page-link {
+                    background: transparent;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

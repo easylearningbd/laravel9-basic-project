@@ -1,0 +1,182 @@
+/*=============================
+08. Partner
+=============================*/
+.partner {
+    position: relative;
+    padding: 100px 0 130px;
+    @media #{$md} {
+        padding: 120px 0 120px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: $grey;
+        z-index: -1;
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+    &__logo__wrap {
+        position: relative;
+        max-width: 552px;
+        min-height: 555px;
+        left: -15px;
+        @media #{$xl} {
+            min-height: 500px;
+            left: 0;
+        }
+        @media #{$lg} {
+            margin-right: 30px;
+            min-height: 465px;
+        }
+        @media #{$md} {
+            min-height: 450px;
+            margin: 0 auto 40px;
+        }
+        @media #{$xs} {
+            min-height: 350px;
+            max-width: 400px;
+        }
+        & li {
+            position: absolute;
+            @include transition(1000ms);
+            & img {
+                @include radius(50%);
+                box-shadow: 0px 5px 8px #F4F4F4;
+                &.dark {
+                    display: none;
+                    box-shadow: none;
+                }
+            }
+            &:nth-child(1) {
+                left: 31%;
+                top: 0;
+                @include transform(translate(140%, 350%));
+                @media #{$xs} {
+                    @include transform(translate(0, 0));
+                }
+                & img {
+                    max-width: 75px;
+                }
+            }
+            &:nth-child(2) {
+                top: 8%;
+                right: 0;
+                @include transform(translate(-100%, 110%));
+                @media #{$xs} {
+                    @include transform(translate(0, 0));
+                }
+                & img {
+                    max-width: 157px;
+                    @media #{$lg} {
+                        max-width: 130px;
+                    }
+                    @media #{$xs} {
+                        max-width: 90px;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                top: 30%;
+                left: 0;
+                @include transform(translate(160%, 35%));
+                @media #{$xs} {
+                    @include transform(translate(0, 0));
+                }
+                & img {
+                    max-width: 148.5px;
+                    @media #{$lg} {
+                        max-width: 120px;
+                    }
+                    @media #{$xs} {
+                        max-width: 90px;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                bottom: 40%;
+                right: 37%;
+                & img {
+                    max-width: 62.5px;
+                }
+            }
+            &:nth-child(5) {
+                bottom: 0;
+                left: 22%;
+                @include transform(translate(130%, -190%));
+                @media #{$xs} {
+                    @include transform(translate(0, 0));
+                }
+                & img {
+                    max-width: 109px;
+                    @media #{$xs} {
+                        max-width: 90px;
+                    }
+                }
+            }
+            &:nth-child(6) {
+                bottom: 6%;
+                right: 0;
+                @include transform(translate(-160%, -160%));
+                @media #{$xs} {
+                    @include transform(translate(0, 0));
+                }
+                & img {
+                    max-width: 110px;
+                    @media #{$xs} {
+                        max-width: 90px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        margin-left: 85px;
+        @media #{$lg} {
+            margin-left: 30px;
+        }
+        @media #{$md} {
+            margin-left: 0;
+        }
+        & .section__title {
+            margin-bottom: 29px;
+        }
+        & p {
+            margin-bottom: 50px;
+            @media #{$xs} {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.partner {
+    &__logo__wrap {
+        & li {
+            &.now-in-view {
+                &:nth-child(1) {
+                    @include transform(translate(0, 0));
+                }
+                &:nth-child(2) {
+                    @include transform(translate(0, 0));
+                }
+                &:nth-child(3) {
+                    @include transform(translate(0, 0));
+                }
+                &:nth-child(5) {
+                    @include transform(translate(0, 0));
+                }
+                &:nth-child(6) {
+                    @include transform(translate(0, 0));
+                }
+                &:nth-child(7) {
+                    @include transform(translate(0, 0));
+                }
+            }
+        }
+    }
+}

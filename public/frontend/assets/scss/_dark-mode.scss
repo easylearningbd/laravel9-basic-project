@@ -1,0 +1,329 @@
+/*=============================
+15. Dark Mode
+=============================*/
+body {
+    &.active-dark-mode {
+        background: $dark;
+        color: $dark-body-text-color;
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6 {
+            color: $white;
+        }
+        & p {
+            color: $dark-paragraph-text-color;
+        }
+    }
+}
+.active-dark-mode {
+    background: $dark;
+    & .menu__nav .logo .logo__black {
+        display: none;
+    }
+    & .menu__nav .logo .logo__white {
+        display: inline-block;
+    }
+    & .navbar__wrap ul li a {
+        color: $white;
+    }
+    & .menu__area {
+        &.sticky-menu {
+            background: $dark-light;
+        }
+        & .mobile__nav__toggler {
+            color: $white;
+            border-color: $white;
+        }
+    }
+    & .mobile__menu {
+        & .menu__box {
+            background: $dark;
+            & .nav-logo {
+                .logo__white {
+                    display: inline-block;
+                }
+                .logo__black {
+                    display: none;
+                }
+            }
+        }
+        & .close__btn {
+            color: $secondary-color;
+        }
+        & .menu__outer ul li {
+            border-color: #313B58;
+            & > a {
+                color: $white;
+            }
+            &.menu-item-has-children .dropdown__btn {
+                background: $dark-light;
+                color: $white;
+                &.open {
+                    background: $secondary-color;
+                }
+            }
+            & > ul > li:first-child {
+                border-color: #313B58;
+            }
+            &.active > a {
+                color: $secondary-color;
+            }
+        }
+        .menu__outer ul:last-child {
+            border-color: #313B58;
+        }
+        & .social-links ul li a {
+            color: $white;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    & .menu__backdrop {
+        background: $dark;
+    }
+    & .banner {
+        &::after {
+            background: $dark-light;
+        }
+        & .scroll__down {
+            & .scroll__link {
+                background: $dark;
+                border-color: #313B58;
+                &:hover {
+                    background: $primary-color;
+                    border-color: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+        & .banner__video .popup-video::before,
+        & .banner__video .popup-video::after {
+            border-color: #313a60;
+        }
+    }
+    & .switcher__tab {
+        & .light__mode__title,
+        & .dark__mode__title {
+            color: #5B6476;
+        }
+        & .mode__switcher {
+            @media #{$md} {
+                background: $secondary-color;
+            }
+        }
+    }
+    & .about {
+        &::before {
+            background: $dark-light;
+        }
+        & .about__icons__wrap li img {
+            &.light {
+                display: none;
+            }
+            &.dark {
+                display: block;
+            }
+        }
+        &__exp__content p {
+            color: $white;
+        }
+    }
+    & .services {
+        &::before {
+            background: $dark-light;
+        }
+        &__item:hover {
+            & .border-btn {
+                border-color: $primary-color;
+                color: $white;
+            }
+        }
+        &__content {
+            background: $dark-light;
+            border-color: #313B58;
+            & .border-btn {
+                color: $dark-body-text-color;
+                border-color: #313B58;
+            }
+        }
+        &__icon {
+            & img.light {
+                display: none;
+            }
+            & img.dark {
+                display: block;
+            }
+        }
+        &__list li {
+            color: $white;
+            &::before {
+                background: $white;
+            }
+        }
+        &__arrow {
+            & .slick-arrow {
+                border-color: $white;
+                color: $white;
+                &:hover {
+                    border-color: $secondary-color;
+                    background: $secondary-color;
+                }
+            }
+        }
+    }
+    & .work__process {
+        &::before {
+            background: $dark-light;
+        }
+        &__icon {
+            & img {
+                &.light {
+                    display: none;
+                }
+                &.dark {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    & .portfolio {
+        &::before {
+            background: $dark-light;
+        }
+        &__nav li .nav-link {
+            color: $white;
+        }
+        &__active .slick-arrow {
+            color: $white;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    & .partner {
+        &::before {
+            background: $dark-light;
+        }
+        &__logo__wrap {
+            & img.light {
+                display: none;
+            }
+            & img.dark {
+                display: block;
+            }
+        }
+    }
+    & .testimonial {
+        &::after {
+            background: $dark-light;
+        }
+        &__avatar {
+            & span {
+                color: $white;
+            }
+        }
+        &__avatar__img {
+            & li {
+                & img {
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        &__arrow {
+            & button {
+                color: $white;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    & .blog {
+        &::after {
+            background: $dark-light;
+        }
+        &__post__item {
+            &:hover {
+                & .blog__post__content .title a {
+                    color: $secondary-color;
+                }
+            }
+        }
+        &__post__tags a {
+            background: $secondary-color;
+            color: $white;
+            &:hover {
+                background: $primary-color;
+            }
+        }
+        &__post__content {
+            background: $dark-light;
+            border-color: #313B58;
+            & .title a {
+                background-image: linear-gradient($secondary-color, $secondary-color), linear-gradient($secondary-color, $secondary-color);
+            }
+            & .read__more {
+                color: $dark-body-text-color;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    & .homeContact {
+        @media #{$md} {
+            background: transparent;
+        }
+        &__wrap {
+            background: $dark-light;
+            border-color: #313B58;
+        }
+        &__form form {
+            & input {
+                background: transparent;
+                border-color: #313B58;
+                color: $dark-body-text-color;
+                &::placeholder {
+                    color: $dark-body-text-color;
+                }
+            }
+            & textarea {
+                background: transparent;
+                border-color: #313B58;
+                color: $dark-body-text-color;
+                &::placeholder {
+                    color: $dark-body-text-color;
+                }
+            }
+            & [type=submit] {
+                color: $white;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    & .footer {
+        background: $dark;
+        &__widget {
+            & .fw-title .sub-title {
+                color: $dark-body-text-color;
+            }
+        }
+    }
+    & .copyright {
+        &__wrap {
+            border-color: #313B58;
+        }
+        &__text {
+            & p {
+                color: $dark-body-text-color;
+            }
+        }
+    }
+}

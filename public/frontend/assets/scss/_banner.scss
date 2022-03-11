@@ -1,0 +1,217 @@
+/*=============================
+03. Banner
+=============================*/
+.banner {
+    position: relative;
+    padding: 140px 0 0;
+    @media #{$lg} {
+        padding: 120px 0 0;
+    }
+    @media #{$md} {
+        padding: 120px 0 170px;
+    }
+    &__content {
+        margin-top: -40px;
+        @media #{$xl} {
+            margin-top: 20px;
+        }
+        @media #{$md} {
+            margin-top: 0;
+            text-align: center;
+        }
+        & .title {
+            font-size: 66px;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            text-transform: inherit;
+            margin-bottom: 30px;
+            @media #{$xl} {
+                font-size: 58px;
+            }
+            @media #{$lg} {
+                font-size: 48px;
+                margin-bottom: 20px;
+            }
+            @media #{$xs} {
+                font-size: 34px;
+            }
+            & span {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 13px;
+                    background: $secondary-color;
+                    opacity: .19;
+                    z-index: -1;
+                }
+            }
+        }
+        & p {
+            font-size: 18px;
+            line-height: 28px;
+            color: $heading-text-color;
+            margin-bottom: 40px;
+            width: 90%;
+            @media #{$xl} {
+                width: 100%;
+            }
+            @media #{$lg} {
+                font-size: 17px;
+            }
+        }
+    }
+    &__img {
+        margin-right: -30px;
+        @media #{$xxl}{
+            margin-right: 0;
+        }
+        @media #{$md}{
+            margin-bottom: 30px;
+        }
+        & img {
+            max-width: 100%;
+            @media #{$xl} {
+                max-width: 75%;
+            }
+            @media #{$lg} {
+                max-width: 100%;
+            }
+            @media #{$md} {
+                max-width: 65%;
+            }
+            @media #{$xs} {
+                max-width: 100%;
+            }
+            @media #{$sm} {
+                max-width: 80%;
+            }
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $grey;
+        z-index: -1;
+        @media #{$md} {
+            display: none;
+        }
+    }
+    & .scroll__down {
+        position: absolute;
+        right: 0;
+        bottom: -2%;
+        width: calc(((100% - 1560px) / 2) + 1560px);
+        margin-left: auto;
+        z-index: 1;
+        @media #{$xxl} {
+            width: calc(((100% - 1500px) / 2) + 1500px);
+        }
+        & .scroll__link {
+            display: inline-block;
+            background: $white;
+            max-width: 180px;
+            text-align: center;
+            border: 1px solid $grey;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 700;
+            color: #CECECE;
+            padding: 21px 20px;
+            line-height: 1.4;
+            @include transform(rotate(90deg));
+            margin-left: -50px;
+            &:hover {
+                background: $primary-color;
+                border-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+    &__video {
+        position: absolute;
+        left: 50%;
+        bottom: -80px;
+        @include transform(translateX(-50%));
+        z-index: 2;
+        @media #{$xl} {
+            bottom: -65px;
+        }
+        @media #{$lg} {
+            bottom: -50px;
+        }
+        & .popup-video {
+            position: relative;
+            display: block;
+            width: 160px;
+            height: 160px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            background: $secondary-color;
+            color: $white;
+            @include radius(50%);
+            z-index: 1;
+            @media #{$xl} {
+                width: 130px;
+                height: 130px;
+            }
+            @media #{$lg} {
+                width: 100px;
+                height: 100px;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 100%;
+                border: 1px solid #e3e3e3;
+                @include transform(translate(-50%,-50%)scale(1));
+                border-radius: 50%;
+                animation-delay: 1s;
+                z-index: -1;
+                animation: pulse-border 1500ms linear infinite;
+	            -webkit-animation: pulse-border 1500ms linear infinite;
+            }
+            &::after {
+                animation-delay: 2s;
+            }
+        }
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        @include transform(translate(-50%, -50%) scale(1));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(-50%, -50%) scale(1.5));
+        opacity: 0;
+    }
+}
+@-webkit-keyframes pulse-border {
+    0% {
+        @include transform(translate(-50%, -50%) scale(1));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(-50%, -50%) scale(1.5));
+        opacity: 0;
+    }
+}

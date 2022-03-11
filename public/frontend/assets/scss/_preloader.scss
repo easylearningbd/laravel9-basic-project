@@ -1,0 +1,118 @@
+/*=============================
+14. Preloader
+=============================*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $grey;
+    z-index: 999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.rasalina-spin-box {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+		-o-box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+		-ms-box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+		-webkit-box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+		-moz-box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	animation: rasalina-spin ease infinite 4.6s;
+		-o-animation: rasalina-spin ease infinite 4.6s;
+		-ms-animation: rasalina-spin ease infinite 4.6s;
+		-webkit-animation: rasalina-spin ease infinite 4.6s;
+		-moz-animation: rasalina-spin ease infinite 4.6s;
+}
+
+@keyframes rasalina-spin {
+	0%,
+	100% {
+		box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	}
+	25% {
+		box-shadow: -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color;
+	}
+	50% {
+		box-shadow: -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color;
+	}
+	75% {
+		box-shadow: 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color;
+	}
+}
+@-o-keyframes rasalina-spin {
+	0%,
+	100% {
+		box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	}
+	25% {
+		box-shadow: -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color;
+	}
+	50% {
+		box-shadow: -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color;
+	}
+	75% {
+		box-shadow: 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color;
+	}
+}
+@-ms-keyframes rasalina-spin {
+	0%,
+	100% {
+		box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	}
+	25% {
+		box-shadow: -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color;
+	}
+	50% {
+		box-shadow: -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color;
+	}
+	75% {
+		box-shadow: 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color;
+	}
+}
+@-webkit-keyframes rasalina-spin {
+	0%,
+	100% {
+		box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	}
+	25% {
+		box-shadow: -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color;
+	}
+	50% {
+		box-shadow: -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color;
+	}
+	75% {
+		box-shadow: 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color;
+	}
+}
+@-moz-keyframes rasalina-spin {
+	0%,
+	100% {
+		box-shadow: 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color;
+	}
+	25% {
+		box-shadow: -15px 15px $secondary-color, -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color;
+	}
+	50% {
+		box-shadow: -15px -15px $primary-color, 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color;
+	}
+	75% {
+		box-shadow: 15px -15px $secondary-color, 15px 15px $primary-color, -15px 15px $secondary-color, -15px -15px $primary-color;
+	}
+}

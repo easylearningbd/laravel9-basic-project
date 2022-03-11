@@ -1,0 +1,109 @@
+/*=============================
+Breadcrumb
+=============================*/
+.breadcrumb__wrap {
+    background: $grey;
+    padding: 275px 0 155px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @media #{$xl} {
+        padding: 185px 0 115px;
+    }
+    &__content {
+        text-align: center;
+        & .title {
+            font-size: 65px;
+            letter-spacing: -0.01em;
+            text-transform: capitalize;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            @media #{$xs} {
+                font-size: 46px;
+            }
+        }
+    }
+    & .breadcrumb {
+        margin-bottom: 0;
+        justify-content: center;
+        & li {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-color;
+            & a {
+                color: $body-text-color;
+            }
+        }
+    }
+    &__icon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 52px;
+        max-width: 1560px;
+        min-height: 285px;
+        margin: 0 auto;
+        z-index: -1;
+        @media #{$xl} {
+            bottom: 30px;
+            min-height: 235px;
+        }
+        @media #{$lg} {
+            max-width: 960px;
+        }
+        @media #{$md} {
+            display: none;
+        }
+        & ul {
+            & li {
+                position: absolute;
+                & img {
+                    @include radius(50%);
+                }
+                &:nth-child(1) {
+                    left: 9%;
+                    top: 0;
+                    & img {
+                        max-width: 62px;
+                    }
+                }
+                &:nth-child(2) {
+                    left: 1%;
+                    bottom: 21%;
+                    & img {
+                        max-width: 68px;
+                    }
+                }
+                &:nth-child(3) {
+                    left: 15%;
+                    bottom: 0;
+                    & img {
+                        max-width: 40px;
+                    }
+                }
+                &:nth-child(4) {
+                    right: 14%;
+                    top: 0;
+                    & img {
+                        max-width: 58px;
+                    }
+                }
+                &:nth-child(5) {
+                    right: 1%;
+                    top: 13%;
+                    & img {
+                        max-width: 42px;
+                    }
+                }
+                &:nth-child(6) {
+                    right: 5.5%;
+                    bottom: 0;
+                    & img {
+                        max-width: 102px;
+                    }
+                }
+            }
+        }
+    }
+}
