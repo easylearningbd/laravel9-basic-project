@@ -131,6 +131,13 @@
         <!-- init js -->
         <script src="{{ asset('backend/assets/js/pages/form-editor.init.js') }} "></script>
 
+         <!-- Required datatable js -->
+        <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
+            <!-- Datatable init js -->
+        <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
+
 
 
     </body>
