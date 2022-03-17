@@ -147,6 +147,7 @@ class AboutController extends Controller
                 'multi_image' => $save_url,
 
             ]); 
+
             $notification = array(
             'message' => 'Multi Image Updated Successfully', 
             'alert-type' => 'success'
@@ -155,6 +156,26 @@ class AboutController extends Controller
         return redirect()->route('all.multi.image')->with($notification);
 
         }
+
+     }// End Method 
+
+
+     public function DeleteMultiImage($id){
+
+        $multi = MultiImage::findOrFail($id);
+        $img = $multi->multi_image;
+        unlink($img);
+
+        MultiImage::findOrFail($id)->delete();
+
+         $notification = array(
+            'message' => 'Multi Image Deleted Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+       
 
      }// End Method 
 
