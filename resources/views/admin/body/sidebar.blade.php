@@ -61,18 +61,16 @@
 
                             <li class="menu-title">Pages</li>
 
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-account-circle-line"></i>
-                                    <span>Authentication</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="auth-login.html">Login</a></li>
-                                    <li><a href="auth-register.html">Register</a></li>
-                                    <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                                    <li><a href="auth-lock-screen.html">Lock Screen</a></li>
-                                </ul>
-                            </li>
+    <li>
+        <a href="javascript: void(0);" class="has-arrow waves-effect">
+            <i class="ri-account-circle-line"></i>
+            <span>Blog Category</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="{{ route('all.blog.category') }}">All Blog Category</a></li>
+            <li><a href="auth-login.html">Add Blog Category</a></li>
+        </ul>
+    </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
