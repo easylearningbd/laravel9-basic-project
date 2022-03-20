@@ -21,11 +21,8 @@
             <li><a href="portfolio-details.html">Portfolio Details</a></li>
         </ul>
     </li>
-    <li class="menu-item-has-children"><a href="#">Our Blog</a>
-        <ul class="sub-menu">
-            <li><a href="blog.html">Our News</a></li>
-            <li><a href="blog-details.html">News Details</a></li>
-        </ul>
+    <li class="menu-item-has-children"><a href="{{ route('home.blog') }}">Our Blog</a>
+        
     </li>
     <li><a href="contact.html">contact me</a></li>
     </ul>
