@@ -51,6 +51,15 @@ class BlogController extends Controller
     }// End Method
 
 
+    public function EditBlog($id){
+
+         $blogs = Blog::findOrFail($id);
+         $categories = BlogCategory::orderBy('blog_category','ASC')->get();
+        return view('admin.blogs.blogs_edit',compact('blogs','categories'));
+
+    } // End Method
+
+
 
 }
  
