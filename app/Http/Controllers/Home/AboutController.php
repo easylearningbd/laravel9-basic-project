@@ -12,7 +12,7 @@ use Illuminate\Support\Carbon;
 class AboutController extends Controller
 {
     public function AboutPage(){
-
+ 
         $aboutpage = About::find(1);
         return view('admin.about_page.about_page_all',compact('aboutpage'));
 
