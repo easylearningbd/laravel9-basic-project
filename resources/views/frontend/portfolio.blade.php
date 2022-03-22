@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+PortFolio | EasyLearning Website
+@endsection
+
   <main>
 
             <!-- breadcrumb-area -->
