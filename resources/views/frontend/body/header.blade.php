@@ -12,15 +12,14 @@
     </div>
     <div class="navbar__wrap main__menu d-none d-xl-flex">
     <ul class="navigation">
+
     <li class="active"><a href="{{ url('/') }}">Home</a></li>
     <li><a href="{{ route('home.about') }}">About</a></li>
     <li><a href="services-details.html">Services</a></li>
-    <li class="menu-item-has-children"><a href="#">Portfolio</a>
-        <ul class="sub-menu">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-        </ul>
-    </li>
+    <li class="menu-item-has-children"><a href="{{ route('home.portfolio') }}">Portfolio</a>
+         
+    </li>    
+
     <li class="menu-item-has-children"><a href="{{ route('home.blog') }}">Our Blog</a>
         
     </li>
