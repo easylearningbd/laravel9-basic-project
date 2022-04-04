@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
-use App\Models\BlogCategory;
+use App\Models\BlogCategory; 
 use Image;
 use Illuminate\Support\Carbon;
 
