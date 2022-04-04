@@ -27,7 +27,7 @@ Route::controller(DemoController::class)->group(function () {
 
  // Admin All Route 
 Route::middleware(['auth'])->group(function () {
-    
+     
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
