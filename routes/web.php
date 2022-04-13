@@ -15,7 +15,7 @@ use App\Http\Controllers\Home\ContactController;
 //     return view('frontend.index');
 // }); 
 
- 
+  
 Route::controller(DemoController::class)->group(function () {
     Route::get('/', 'HomeMain')->name('home');
 
