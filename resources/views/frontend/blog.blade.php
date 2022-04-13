@@ -67,9 +67,9 @@ Blog | EasyLearning Website
                             @endforeach
 
 
-                            <div class="pagination-wrap">
-                               {{ $allblogs->links() }} 
-                            </div>
+        <div class="pagination-wrap">
+            {{ $allblogs->links('vendor.pagination.custom') }}
+        </div>
                         </div>
                         <div class="col-lg-4">
                             <aside class="blog__sidebar">
